@@ -1,0 +1,52 @@
+
+Java Threads sind eine Möglichkeit, in Java parallele Ausführung zu erreichen.
+Threads ermöglichen es einem Programm, mehrere
+Operationen gleichzeitig auszuführen oder zumindest den Eindruck davon zu erwecken,
+indem verschiedene Aufgaben parallel abgearbeitet werden.
+
+Java Threads funktionieren auf der Basis von Multithreading, was bedeutet,
+dass mehrere Threads innerhalb eines Programms gleichzeitig ausgeführt werden können.
+
+Beim In Java können Threads auf 2 Wege implementiert werden:
+Indem sie in einer separaten Klasse von Thread erben oder indem sie das Runnable Interface
+implementieren und an den Thread-Konstruktor weitergeben.
+
+Vererbung Vorteil:
+	besser im Klassendiagramm darstellbar
+	man hat mit der Klasse schon Logik mit in den Methoden
+	polymorphie
+
+
+Interface Vorteil:
+	man kann mehrmals vererben
+	ist abstrakt
+
+
+--- Nebenläufigkeit und Parallelität ---
+In Java bezieht sich Thread-Nebenläufigkeit darauf, dass mehrere Threads innerhalb eines
+Programms gleichzeitig ausgeführt werden können. Ermöglicht: verschiedene Teile eines Programms
+gleichzeitig zu bearbeiten.
+Nebenläufige Threads teilen sich oft gemeinsame Ressourcen und können sich gegenseitig beeinflussen.
+
+Parallelität in Java bezieht sich auf die gleichzeitige Ausführung von Aufgaben auf mehreren
+Prozessoren oder CPU-Kernen. Sie ermöglicht es, mehrere Aufgaben zur selben Zeit auszuführen.
+Erreicht durch z.B. Executor Service
+
+--- Verwendung Thread-Pool ---
+
+
+--- ExecutorService ---
+-//- bietet einen abstrakten Mechanismus zur Verwaltung von Threads und erlaubt die parallele
+Ausführung von Aufgaben, ohne dass der Benutzer Threads manuell erstellen oder deren
+Lebenszyklus verwalten muss.
+
+--- Synchronized ---
+
+--- Deadlock ---
+
+--- Thread-Kommunikation ---
+
+--- Thread-Prioritäten und Scheduling ---
+
+--- Behandlung von Ausnahmen in Threads ---
+
