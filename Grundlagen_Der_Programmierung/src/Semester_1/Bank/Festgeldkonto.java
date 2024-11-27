@@ -1,4 +1,4 @@
-package aufgaben.Bank;
+package Semester_1.Bank;
 
 public class Festgeldkonto {
 }

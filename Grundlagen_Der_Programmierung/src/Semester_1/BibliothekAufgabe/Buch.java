@@ -26,10 +26,28 @@ public class Buch {
         Buch.count++;
     }
 
+    public Buch(String titel, String isbn, int jahr, User[] autoren) {
+        this.titel = titel;
+        this.isbn = isbn;
+        this.jahr = jahr;
+        this.autoren = autoren;
+        Buch.count++;
+    }
+
+
     public void addExemplar(Exemplar ex) {
         for (int i = 0; i < exemplare.length; i++) {
             if (exemplare[i] == null) {
                 exemplare[i] = ex;
+                break;
+            }
+        }
+    }
+
+    public void addAuthor(User u) {
+        for (int i = 0; i < autoren.length; i++) {
+            if (autoren[i] == null) {
+                autoren[i] = u;
                 break;
             }
         }
@@ -43,7 +61,7 @@ public class Buch {
     }
 
     public Buch kopie(){
-        return new Buch(this.getTitel(), this.getIsbn(), this.getJahr(), this.autoren[0]);
+        return new Buch(this.getTitel(), this.getIsbn(), this.getJahr(), this.autoren);
     }
 
 

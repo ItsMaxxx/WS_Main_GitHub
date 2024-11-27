@@ -1,4 +1,4 @@
-package aufgaben.BibliothekAufgabe;
+package Semester_1.BibliothekAufgabe;
 //Aufgaben Bibliothek I, II, III, IV, V, VI, VII
 
 public class Bibliothek {
@@ -19,6 +19,7 @@ public class Bibliothek {
 
         //Erstellen von 2 Buechern mit ihren Exemplaren
         Buch b1 = new Buch("Java fuer Dummies", "1234567890", 2024, user1);
+
         //f = fantasyregal
         //104 = ebene 1, position 4 (von links nach rechts)
         Exemplar e1 = new Exemplar(01, "f03", 104);
@@ -35,21 +36,26 @@ public class Bibliothek {
         b1.exemplare[0].verleiheAn(user2);
         b2.exemplare[0].verleiheAn(user1);
 
-        bib.print();
-
         //Aufgabe Nr.1: Bibliothek ausgeben
+        bib.print();
+        System.out.println("\tEnde bib.print()");
 
         //Aufgabe Nr.2: ".equals" implementieren
-        /*System.out.println(b1.equals(b2));*/
+        //Haben Buch 1 und 2 die selbe ISBN?
+        System.out.println(b1.equals(b2)+ "\n");
 
         //Aufgabe Nr.3: Buch kopieren und ausgeben
-        /*
+        User user3 = new User(1, "Johannes", "Peter");
+        b1.addAuthor(user3);
+
+        System.out.println("Erstelle eine Kopie eines Buches und gebe beide aus.\n");
         Buch buchkopie = b1.kopie();
         b1.print();
         buchkopie.print();
+
+        System.out.println("\nSind es die gleichen Bücher?");
         System.out.println(b1.equals(buchkopie));
-        */
-        System.out.println("FERTIG");
+
 
     }
 

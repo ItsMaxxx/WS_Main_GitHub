@@ -1,4 +1,4 @@
-package aufgaben.Aufgabenblock_Vor_OOP;
+package Semester_1.Aufgabenblock_Vor_OOP;
 
 public class Finde_Min_Max {
 

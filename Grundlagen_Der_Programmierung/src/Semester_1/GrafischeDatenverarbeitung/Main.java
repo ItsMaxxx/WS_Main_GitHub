@@ -1,4 +1,4 @@
-package aufgaben.GrafischeDatenverarbeitung;
+package Semester_1.GrafischeDatenverarbeitung;
 
 public class Main {
 

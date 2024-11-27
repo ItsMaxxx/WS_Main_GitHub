@@ -1,4 +1,4 @@
-package aufgaben.BibliothekAufgabe;
+package Semester_1.BibliothekAufgabe;
 
 public class Exemplar {
 
