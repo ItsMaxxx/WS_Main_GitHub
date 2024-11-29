@@ -10,12 +10,20 @@ public class Person implements Personendaten{
     public String getName(){
         return name;
     }
+
     @Override
     public String getNachname(){
         return nachname;
     }
 
+    @Override
+    public String getGeschlecht(){
+        return geschlecht;
+    }
 
-
+    @Override
+    public void setGeschlecht(String str){
+        this.geschlecht = str;
+    }
 
 }
