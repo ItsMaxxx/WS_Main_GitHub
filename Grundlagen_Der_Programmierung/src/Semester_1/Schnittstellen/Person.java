@@ -16,30 +16,17 @@ public class Person implements Personendaten{
     public String getName(){
         return name;
     }
-<<<<<<< Updated upstream
-
-=======
     
->>>>>>> Stashed changes
     @Override
     public String getNachname(){
         return nachname;
     }
-<<<<<<< Updated upstream
 
     @Override
     public String getGeschlecht(){
         return geschlecht;
     }
-
-=======
     
-    @Override
-    public String getGeschlecht(){
-        return this.geschlecht;
-    }
-    
->>>>>>> Stashed changes
     @Override
     public void setGeschlecht(String str){
         this.geschlecht = str;
