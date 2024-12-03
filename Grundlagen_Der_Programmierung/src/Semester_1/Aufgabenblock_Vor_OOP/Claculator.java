@@ -1,6 +1,5 @@
-package Semester_1;
+package Semester_1.Aufgabenblock_Vor_OOP;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Claculator {

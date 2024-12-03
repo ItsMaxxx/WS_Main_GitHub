@@ -1,4 +1,4 @@
-package Semester_1;
+package Semester_1.Aufgabenblock_Vor_OOP;
 
 public class Bubblesort {
     

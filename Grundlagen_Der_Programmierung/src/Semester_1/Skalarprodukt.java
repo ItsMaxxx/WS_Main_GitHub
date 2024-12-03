@@ -7,7 +7,7 @@ public class Skalarprodukt {
         Vektor v1 = new Vektor(1, 2, 3);
         Vektor v2 = new Vektor(-7, 8, 9);
 
-        Vektor v3 = new Vektor(v1.werte.clone());
+        Vektor v3 = new Vektor(v1.werte);
 
         System.out.println(skalarprodukt(v1, v2));
     }
@@ -24,7 +24,6 @@ public class Skalarprodukt {
 
 class Vektor{
     int[] werte = new int[3];
-    
     public Vektor(){}
     
     public Vektor(int x, int y, int z){
@@ -32,11 +31,7 @@ class Vektor{
         this.werte[1] = y;
         this.werte[2] = z;
     }
-
     public Vektor(int[] array){
         this.werte = array;
     }
-
-
-
 }

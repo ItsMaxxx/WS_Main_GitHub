@@ -1,4 +1,4 @@
-package aufgaben;
+package Semester_1.Aufgabenblock_Vor_OOP;
 
 import java.util.Scanner;
 
