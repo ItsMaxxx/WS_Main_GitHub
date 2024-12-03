@@ -12,6 +12,35 @@ public class Hochschule implements Mitarbeiterdaten {
     public String toString(){
         return "";
     }
-
-
+    
+    
+    @Override
+    public void setGehalt(double gehalt) {
+    
+    }
+    
+    @Override
+    public double getGehalt() {
+        return 0;
+    }
+    
+    @Override
+    public String getName() {
+        return "";
+    }
+    
+    @Override
+    public String getNachname() {
+        return "";
+    }
+    
+    @Override
+    public String getGeschlecht() {
+        return "";
+    }
+    
+    @Override
+    public void setGeschlecht(String str) {
+    
+    }
 }
