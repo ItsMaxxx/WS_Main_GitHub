@@ -25,5 +25,6 @@ public class Primzahl {
         }
         return primzahl;
     }
-    
+
+
 }
