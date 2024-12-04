@@ -73,23 +73,33 @@ public class Club {
     }
 
     public void addDivision(Division division) {
-
-
-
-
-
+        for(int i = 0; i< divisionen.length; i++){
+            if(divisionen[0] == null){
+                divisionen[0] = division;
+            }
+        }
     }
-
-
-
-
-
-
+    
     public Division[] getDivisionen() {
         return divisionen;
     }
-
-
-
-
+    
+    public Member[] getMembers() {
+        return members;
+    }
+    
+    public void printMembers(Member[] m){
+        for(Member member : m){
+            System.out.println("Name: " + member.getName() + " " + member.getNachname());
+        }
+    }
+    
+    public int getFee(){
+        int sum = 0;
+        for(Member member : members){
+            sum += member.getFee();
+        }
+        return sum;
+    }
+    
 }
