@@ -33,7 +33,4 @@ public class Claculator {
         System.out.println(ergebnis);
     }
 
-
-
-
 }
