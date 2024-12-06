@@ -53,11 +53,14 @@ public class TicTacToe {
 
     public static void printBoard(){
         for (String[] strings : ticTac) {
+            System.out.println("-------------");
+            System.out.print("|");
             for (String string : strings) {
-                System.out.print("[" + string + "] ");
+                System.out.print(" " + string + " |");
             }
             System.out.println();
         }
+        System.out.println("-------------");
     }
 
     public static boolean checkWin(Player player){
@@ -69,7 +72,7 @@ public class TicTacToe {
         for(int i = 0; i < leereFelder.length; i++){
             for(int ii = 0; ii < leereFelder[i].length; ii++){
                 if(leereFelder[i][ii] == null){
-                    leereFelder[i][ii] = "leer";
+                    leereFelder[i][ii] = "l";
                 }
             }
         }
