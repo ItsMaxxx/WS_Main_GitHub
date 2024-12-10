@@ -57,8 +57,6 @@ public class Bibliothek {
 
         System.out.println("\nSind es die gleichen Bücher?");
         System.out.println(b1.equals(buchkopie));
-
-
     }
 
     public Bibliothek(String institutionsName, String standort){
