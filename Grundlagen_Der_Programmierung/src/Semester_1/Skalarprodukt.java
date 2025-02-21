@@ -1,4 +1,4 @@
-package aufgaben;
+package Semester_1;
 
 public class Skalarprodukt {
     
