@@ -6,8 +6,6 @@ public class Bibliothek {
     public Buch[] buecher = new Buch[100];
     public User[] users = new User[20];
 
-    //Hallo
-
     public String institutionsName;
     public String standort;
 
@@ -57,7 +55,6 @@ public class Bibliothek {
 
         System.out.println("\nSind es die gleichen Bücher?");
         System.out.println(b1.equals(buchkopie));
-
 
     }
 

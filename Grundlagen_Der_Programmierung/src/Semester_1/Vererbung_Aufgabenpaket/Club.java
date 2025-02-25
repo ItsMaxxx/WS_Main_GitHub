@@ -7,8 +7,7 @@ public class Club {
 
     public static void main(String[] args){
 
-
-        Member sp = new SoccerPlayer("Peter", "Pan", "28.04.2008");
+        /*Member sp = new SoccerPlayer("Peter", "Pan", "28.04.2008");
         /*System.out.println(sp.getFee());
 
         System.out.println(sp.setPosition("FORWARD"));
@@ -59,17 +58,16 @@ public class Club {
 
         for(int i = 0; i < j.getSpecial().length; i++){
             System.out.println(j.getSpecial()[i]);
-        }*/
+        }
 
         //----------------------------------------------------------------
-
+        */
         Member bp = new BasketballPlayer("Gordon", "Ramsay", "11.09.2001");
 
         Division basketballDivision = new Division(DivisionData.BASKETBALL);
         System.out.println(basketballDivision.abteilungstyp);
 
         basketballDivision.addMember(bp);
-
     }
 
     public void addDivision(Division division) {
