@@ -124,7 +124,4 @@ public class JavaDoc {
         }
         return ergebnis;
     }
-
-
-
 }
