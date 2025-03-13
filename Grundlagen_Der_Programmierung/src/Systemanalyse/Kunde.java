@@ -1,9 +1,12 @@
 package Systemanalyse;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Kunde {
-  
+
+  ArrayList<Konto> konten = new ArrayList<Konto>();
+
   private String name;
   private String nachname;
   private Adresse adresse;
@@ -34,7 +37,9 @@ public class Kunde {
     this.datumErsteKontoeroeffnung = datumErsteKontoeroeffnung;
     this.habenszins = habenszins;
   }
-  
+
+
+
   public void einzahlen(){
   
   }

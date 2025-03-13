@@ -1,4 +1,7 @@
 package Systemanalyse;
 
-public class Sparkonto {
+public class Sparkonto extends Konto{
+    public Sparkonto(Currency kontostand) {
+        super(kontostand);
+    }
 }
