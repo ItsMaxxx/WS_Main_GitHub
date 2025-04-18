@@ -26,6 +26,9 @@ public class Main {
         for(Person current : personen){
             System.out.println(current.toString());
         }
+
+
+
     }
 
     public static void anderePersonMethode(){

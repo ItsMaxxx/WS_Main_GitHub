@@ -21,7 +21,7 @@ public class ComparablePerson implements Comparable<ComparablePerson> {
     }
 
 //    @Override
-//    public int compareTo(Person o) {
+//    public int compareTo(ComparablePerson o) {
 //        // Zuerst nach personalNr (absteigend)
 //        int result = Integer.compare(o.getPersonalNr(), this.personalNr);
 //
