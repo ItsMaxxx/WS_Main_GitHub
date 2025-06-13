@@ -3,7 +3,7 @@
 ## FakeCubeGame
 - Hier ist das Spiel drin, das ich selbst gemacht habe.
 
-## Grundlagen_Der_PRogrammierung
+## Grundlagen_Der_Programmierung
 - Hier ist alles drin, was ich in der DHBW Mannheim gemacht habe.
 
 ## LeetCodeProblems
