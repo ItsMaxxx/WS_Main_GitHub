@@ -11,5 +11,5 @@
 
 
 ## Toolbox
-- Hier ist meine Toolbox, hier sollte alles drin sein, was ich über Java etc. weis
+- Hier ist meine Toolbox, hier sollte alles drin sein, was ich über Java etc. weiß
 
