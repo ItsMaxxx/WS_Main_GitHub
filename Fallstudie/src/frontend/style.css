@@ -1,0 +1,17 @@
+
+
+.header{
+    background-color: powderblue;
+}
+
+.footer{
+    background-color: blue;
+}
+
+/* sicherstellen, dass .hidden wirklich alles verbirgt */
+.login-page.hidden,
+.register-page.hidden,
+.shop-page.hidden,
+.game-page.hidden {
+    display: none;
+}

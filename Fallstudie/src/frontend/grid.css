@@ -1,0 +1,50 @@
+/* Important for the Grid-Layout - makes sure that the padding and border of
+the elements gets included in the total width and height of the elements.*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);   /* 12 gleich breite Columns (je 1fr = 1/12) */
+    grid-template-rows:    repeat(10, 10%);   /* 10 Zeilen, jede 10% der Höhe            */
+    height: 100vh;                            /* damit sich 10% auf die Höhe beziehen   */
+}
+
+.header{
+    grid-column: 1 / span 12;   /* 12 Spalten breit von 12 */
+    grid-row:    1 / span 1;    /* 1 Zeile hoch von 10 */
+}
+
+.login-page{
+    grid-column: 1 / span 12;   /* wieder volle Breite */
+    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
+}
+
+.register-page{
+    grid-column: 1 / span 12;   /* wieder volle Breite */
+    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
+}
+
+.shop-page{
+    grid-column: 1 / span 12;   /* wieder volle Breite */
+    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
+}
+
+.game-page{
+    grid-column: 1 / span 12;   /* wieder volle Breite */
+    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
+}
+
+.footer{
+    grid-column: 1 / span 12;   /* wieder volle Breite */
+    grid-row:    10 / span 1;    /* 8 Zeilen hoch  -> 80% der Höhe */
+}
+
+/* Teil der Logik für das Ein- und Ausblenden von Pages */
+.hidden {
+    display: none;   /* Element ist unsichtbar und nimmt keinen Platz ein */
+}
+
+
