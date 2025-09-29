@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+    <meta charset="utf-8">
+    <title>Book Of DHBW</title>
+
+    <link rel="stylesheet" href="../frontend/grid.css"> <!-- Layout of the Webpage -->
+    <link rel="stylesheet" href="../frontend/login_page_styles.css"> <!-- Login Page Style -->
+    <link rel="stylesheet" href="../frontend/register_page_styles.css"> <!-- Register Page Style -->
+    <link rel="stylesheet" href="../frontend/game_page_styles.css"> <!-- Game(Main) Page Style -->
+    <link rel="stylesheet" href="../frontend/shop_page_styles.css"> <!-- Shop Page Style -->
+    <link rel="stylesheet" href="../frontend/style.css"> <!-- Header/Footer/Rest Style -->
+
+</head>
+<!-- End Head -->
+
+
+<!-- Body -->
+<body>
+
+<div class="grid-container">
+
+    <!--- Header --->
+    <div class="header">
+        <h1>Welcome</h1>
+        <button onclick="showPage('login')">Login</button>
+        <button onclick="showPage('shop')">Shop</button>
+        <button onclick="showPage('game')">Game</button>
+    </div>
+    <!--- End Header --->
+
+
+    <!--- Login Page --->
+    <div class="login-page">
+        <div class="login-card" role="region" aria-labelledby="login-heading">
+            <h2 id="login-heading">Sign in to your account</h2>
+
+            <form id="loginForm" novalidate>
+                <div class="field">
+                    <label for="username">Benutzername oder E-Mail</label>
+                    <input id="username" name="username" type="text" autocomplete="username" required
+                           inputmode="email" placeholder="name@example.com" />
+                    <span class="hint" id="usernameHint">Gib deinen Benutzernamen oder E-Mail ein.</span>
+                </div>
+
+                <div class="field">
+                    <label for="password">Passwort</label>
+                    <div class="pw-row">
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
+                               aria-describedby="pwHint" placeholder="#Sicheres%Passwort?" />
+                        <button type="button" class="show-pw" aria-pressed="false" aria-label="Passwort anzeigen">Passwort Anzeigen</button>
+                    </div>
+                    <span class="hint" id="pwHint">Mindestens 8 Zeichen empfohlen.</span>
+                </div>
+
+                <div class="row-between">
+                    <label class="checkbox">
+                        <input type="checkbox" id="remember" name="remember" />
+                        <span>Angemeldet bleiben</span>
+                    </label>
+                    <a class="link" href="#" id="forgot">Passwort vergessen?</a>
+                </div>
+
+                <div class="actions">
+                    <button id="loginBtn" type="submit" class="primary">Anmelden</button>
+                    <button id="signupBtn" type="button" class="secondary">Registrieren</button>
+                </div>
+
+                <div id="formMessage" role="status" aria-live="polite" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+    <!--- End Login Page --->
+
+
+    <!--- Register Page --->
+    <div class="register-page hidden">
+        <div class="register-card" role="region" aria-labelledby="register-heading">
+            <h2 id="register-heading">Registrieren</h2>
+
+            <form id="registerForm" novalidate>
+                <div class="field">
+                    <label for="reg_username">Benutzername</label>
+                    <input id="reg_username" name="username" type="text" autocomplete="username" required placeholder="Dein Benutzername" />
+                </div>
+
+                <div class="field">
+                    <label for="reg_email">E-Mail</label>
+                    <input id="reg_email" name="email" type="email" autocomplete="email" required placeholder="name@example.com" />
+                </div>
+
+                <div class="field">
+                    <label for="reg_password">Passwort</label>
+                    <input id="reg_password" name="password" type="password" required minlength="8" placeholder="Mind. 8 Zeichen" />
+                    <span class="hint">Mindestens 8 Zeichen, enthält Zahlen & Sonderzeichen empfohlen.</span>
+                </div>
+
+                <div class="field">
+                    <label for="reg_confirm">Passwort wiederholen</label>
+                    <input id="reg_confirm" name="confirm" type="password" required minlength="8" placeholder="Passwort wiederholen" />
+                </div>
+
+                <div class="field">
+                    <label for="reg_birth">Geburtsdatum</label>
+                    <input id="reg_birth" name="birthdate" type="date" />
+                </div>
+
+                <div class="field">
+                    <label for="reg_initial">Start-Coins (optional)</label>
+                    <input id="reg_initial" name="initial" type="number" min="0" step="1" placeholder="z.B. 1000" />
+                    <span class="hint">Optional: Start-Coins (nur lokal gespeichert).</span>
+                </div>
+
+                <div class="row-between">
+                    <label class="checkbox">
+                        <input type="checkbox" id="reg_terms" name="terms" required />
+                        <span>Ich akzeptiere die AGB</span>
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button id="registerBtn" type="submit" class="primary">Registrieren</button>
+                    <button id="registerCancelBtn" type="button" class="secondary">Abbrechen</button>
+                </div>
+
+                <div id="registerMessage" role="status" aria-live="polite" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+    <!--- End Register Page --->
+
+    <!--- Footer --->
+    <div class="footer">
+
+
+    </div>
+    <!--- End Footer --->
+
+</div>
+
+<script src="../frontend/page_logic.js"></script> <!-- Main Logic for the Webpage -->
+<script src="../frontend/login.js"></script> <!-- Logic for the Login Page -->
+<script src="../frontend/register.js"></script> <!-- Logic for the Register Page -->
+<script src="../frontend/game.js"></script> <!-- Logic for the Game(Main) Page -->
+<script src="../frontend/shop.js"></script> <!-- Logic for the Shop Page -->
+
+</body>
+<!-- End Body -->
+
+</html>
+<!-- End HTML -->
+
+
