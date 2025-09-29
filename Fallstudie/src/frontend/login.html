@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Book of Hubert - Slot Machine</title>
+
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function goToHome() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="header">
+    <h1 onclick="goToHome()" style="cursor: pointer;">Book Of Hubert Slot</h1>
+</div>
+
+<div class="login-page hidden">
+    <div class="login-container">
+        <!-- Linke Haelfte -->
+        <div class="login-info-box">
+            <div class="illustration-placeholder">
+                <img src="placeholder_illustration.png" alt="	Schatzjagd Illustration oder Glücksbringer">
+            </div>
+            <h2>Ihre Chance auf den nächsten DHBW Jackpot!</h2>
+            <p>Starten Sie jetzt Ihre Jagd nach den höchsten Multiplikatoren und Freispielen.</p>
+        </div>
+
+        <!-- Rechte Haelfte -->
+
+        <div class="login-card" role="region" aria-labelledby="login-heading">
+            <h2 id="login-heading">Einloggen</h2>
+
+            <form id="loginForm" novalidate>
+                <div class="field">
+                    <label for="username">E-Mail-Adresse</label>
+                    <input id="username" name="username" type="text" autocomplete="username" required
+                           inputmode="email" placeholder="abc@testmail.com"/>
+                </div>
+
+                <div class="field">
+                    <div class="row-between">
+                        <label for="password">Passwort</label>
+                        <a class="link pw-forgot-link" href="#" id="forgot">Passwort vergessen?</a>
+                    </div>
+                    <div class="pw-row styled-input">
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
+                               placeholder="••••••••••••"/>
+                        <button type="button" class="show-pw" aria-pressed="false" aria-label="Passwort anzeigen">👁
+                        </button>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="loginBtn" type="submit" class="primary login-btn">Login</button>
+                </div>
+
+                <p class="signup-prompt">
+                    <a class="link" href="register.html" id="signupBtn">Registrieren</a>
+                </p>
+
+                <!-- onclick="window.location.href='login.html'" -->
+
+                <div id="formMessage" role="status" aria-live="polite" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

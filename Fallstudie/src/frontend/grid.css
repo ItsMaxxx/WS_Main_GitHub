@@ -7,40 +7,41 @@ the elements gets included in the total width and height of the elements.*/
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);   /* 12 gleich breite Columns (je 1fr = 1/12) */
-    grid-template-rows:    repeat(10, 10%);   /* 10 Zeilen, jede 10% der Höhe            */
-    height: 100vh;                            /* damit sich 10% auf die Höhe beziehen   */
+    grid-template-columns: repeat(12, 1fr);
+    /* NEU: Header/Footer nehmen nur so viel Platz wie nötig (auto),
+       der Homepage-Bereich nimmt den restlichen verfügbaren Platz (1fr) */
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; /* Beibehalten, um das Layout auf 100% der Bildschirmhöhe zu zwingen */
 }
 
+/*Start Block*/
 .header{
-    grid-column: 1 / span 12;   /* 12 Spalten breit von 12 */
-    grid-row:    1 / span 1;    /* 1 Zeile hoch von 10 */
+    grid-column: 1 / span 12;
+    grid-row:    1 / 2; /* Zeile 1 */
+    /*Damit er über dem Inhalt bleibt*/
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Stellt sicher, dass er über dem Inhalt liegt */
 }
 
-.login-page{
-    grid-column: 1 / span 12;   /* wieder volle Breite */
-    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
-}
+/*Start Middle Block*/
+.homepage{
+    grid-column: 1 / span 12;
+    grid-row:    2 / 3; /* NEU: Zeile 2 (die 1fr-Zeile) */
 
-.register-page{
-    grid-column: 1 / span 12;   /* wieder volle Breite */
-    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
+    /* WICHTIG: Das tatsächliche Scrollen des Inhalts aktivieren */
+    overflow-y: auto;
 }
-
-.shop-page{
-    grid-column: 1 / span 12;   /* wieder volle Breite */
-    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
-}
-
-.game-page{
-    grid-column: 1 / span 12;   /* wieder volle Breite */
-    grid-row:    2 / span 8;    /* 8 Zeilen hoch  -> 80% der Höhe */
-}
+/*End Middle Block*/
 
 .footer{
-    grid-column: 1 / span 12;   /* wieder volle Breite */
-    grid-row:    10 / span 1;    /* 8 Zeilen hoch  -> 80% der Höhe */
+    grid-column: 1 / span 12;
+    grid-row:    3 / 4; /* NEU: Zeile 3 */
+    /* Alte Zeile: grid-row: 16 / span 1; */
 }
+/*End Block*/
+
+
 
 /* Teil der Logik für das Ein- und Ausblenden von Pages */
 .hidden {

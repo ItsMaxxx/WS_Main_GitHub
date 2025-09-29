@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Book of Hubert - Registrierung</title>
+
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="login.css"> <link rel="stylesheet" href="register.css">
+    <script>
+        function goToHome() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="header">
+    <h1 onclick="goToHome()" style="cursor: pointer;">Book Of Hubert Slot</h1>
+    <button onclick="window.location.href='login.html'">Login</button>
+</div>
+
+<div class="login-page">
+    <div class="login-container">
+        <div class="login-info-box">
+            <div class="illustration-placeholder">
+                <img src="placeholder_illustration.png" alt="Charakter Level Up Symbol">
+            </div>
+            <h2>Level Up mit dem Book of Hubert!</h2>
+            <p>Sammeln Sie Erfahrungspunkte, verbessern Sie Ihren Charakter und schalten Sie exklusive Skins im Shop frei.</p>
+        </div>
+
+        <div class="login-card" role="region" aria-labelledby="register-heading">
+            <h2 id="register-heading">Kostenlos Registrieren</h2>
+
+            <form id="registerForm" novalidate>
+                <div class="field">
+                    <label for="reg_username">Benutzername</label>
+                    <input id="reg_username" name="username" type="text" required placeholder="Dein Benutzername" />
+                </div>
+
+                <div class="field">
+                    <label for="reg_email">E-Mail</label>
+                    <input id="reg_email" name="email" type="email" required placeholder="name@example.com" />
+                </div>
+
+                <div class="field">
+                    <label for="reg_password">Passwort</label>
+                    <input id="reg_password" name="password" type="password" required minlength="8" placeholder="Mind. 8 Zeichen" />
+                    <span class="hint">Mindestens 8 Zeichen, Zahlen & Sonderzeichen empfohlen.</span>
+                </div>
+
+                <div class="field">
+                    <label for="reg_confirm">Passwort wiederholen</label>
+                    <input id="reg_confirm" name="confirm" type="password" required minlength="8" placeholder="Passwort wiederholen" />
+                </div>
+
+                <div class="field">
+                    <label for="reg_birth">Geburtsdatum</label>
+                    <input id="reg_birth" name="birthdate" type="date" required />
+                    <span class="hint">Mindestalter 18 Jahre erforderlich.</span>
+                </div>
+
+                <div class="field checkbox-row">
+                    <label class="checkbox">
+                        <input type="checkbox" id="reg_terms" name="terms" required />
+                        <span>Ich akzeptiere die AGB & Datenschutzbestimmungen</span>
+                    </label>
+                </div>
+
+                <div class="field checkbox-row">
+                    <label class="checkbox">
+                        <input type="checkbox" id="reg_newsletter" name="newsletter" />
+                        <span>Ich möchte den Newsletter erhalten</span>
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button id="registerBtn" type="submit" class="primary login-btn">Account erstellen</button>
+                </div>
+
+                <p class="signup-prompt">
+                    <a class="link" onclick="window.location.href='login.html'" style="cursor: pointer;">Zurück zur Anmeldung</a>
+                </p>
+
+                <div id="registerMessage" role="status" aria-live="polite" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="register.js"></script>
+
+</body>
+</html>

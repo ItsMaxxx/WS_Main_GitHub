@@ -1,0 +1,74 @@
+/* legal.css - Styling für Impressum, AGB, Datenschutz */
+
+/* Der Hauptcontainer der Seite, um ihn im Grid-Layout (Row 2) zu positionieren */
+.legal-content-page {
+    grid-column: 1 / span 12;
+    grid-row: 2 / 3;
+
+    /* Hintergrund aus login.css */
+    background-color: #0d1117;
+    color: #e6eef8;
+    padding: 3rem 1.5rem;
+    overflow-y: auto;
+}
+
+/* Die innere Karte, in der der Text zentriert wird */
+.legal-content-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem;
+
+    /* Hintergrund wie die Dashboard-Kacheln */
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Textformatierung */
+.legal-content-card h1 {
+    font-size: 2rem;
+    color: #e6eef8;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.legal-content-card h2 {
+    font-size: 1.4rem;
+    color: #58c8a1; /* Akzentfarbe für Überschriften */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content-card section {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.legal-content-card p {
+    margin-bottom: 1rem;
+    color: #c9d1d9;
+}
+
+.legal-content-card a {
+    color: #58c8a1;
+    text-decoration: none;
+}
+
+.legal-content-card a:hover {
+    text-decoration: underline;
+}
+
+/* Anpassung des Footers, damit er nicht den Platz der Legal-Page einnimmt */
+.footer {
+    /* Füge hier das Footer-Styling aus deinem style.css ein */
+    /* Füge dem Footer-Wrapper (falls vorhanden) das Styling für den Dark Mode hinzu */
+}
+
+@media (max-width: 768px) {
+    .legal-content-card {
+        padding: 1.5rem;
+    }
+}

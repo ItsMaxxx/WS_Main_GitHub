@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Book of Hubert - Slot Machine</title>
+
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script>
+        function goToHome() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="grid-container">
+
+    <div class="header">
+        <h1 onclick="goToHome()" style="cursor: pointer;">Book Of Hubert Slot</h1>
+        <button onclick="window.location.href='login.html'">Login</button>
+    </div>
+
+    <!--- Start Homepage --->
+    <div class="homepage">
+
+        <div class="dashboard-layout">
+
+            <section class="overview-section">
+                <h2>Aktuelle Slot-Übersicht</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="value">9,800,000</div>
+                        <div class="label">Aktueller Jackpot (Coins)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="value">345,123</div>
+                        <div class="label">Spins heute</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="value">95.4%</div>
+                        <div class="label">Durchschnittl. RTP</div>
+                    </div>
+                    <div class="stat-card primary-cta">
+                        <div class="value">JETZT SPIELEN</div>
+                        <button onclick="showPage('login')" class="login-prompt-btn">Anmelden & Spin!</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="leaderboard-section">
+                <h2>Top Gewinne (Letzte 24h)</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Benutzername</th>
+                            <th>Gewinn (Coins)</th>
+                            <th>Multiplikator</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Gamer_Hubert</td>
+                            <td>450,000</td>
+                            <td>x900</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>King_Kombos</td>
+                            <td>280,000</td>
+                            <td>x560</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lucky_Liz</td>
+                            <td>150,000</td>
+                            <td>x300</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>SlotStar</td>
+                            <td>75,000</td>
+                            <td>x150</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="reports-section">
+                <h2>Spiel-Berichte & Informationen</h2>
+
+                <div class="reports-grid">
+                    <div class="report-box info-download">
+                        <h3>Fairness-Nachweis</h3>
+                        <p>Laden Sie unsere RNG-Prüfberichte herunter.</p>
+                        <button class="export-btn export-csv">Prüfbericht (CSV)</button>
+                        <button class="export-btn export-excel">Zertifikat (PDF)</button>
+                    </div>
+
+                    <div class="report-box heatmap">
+                        <h3>Top Symbole der Woche</h3>
+                        <p>1. Buch-Symbol: 8% </p>
+                        <p>2. Studentin-Symbol: 6%</p>
+                        <p>3. DHBW-Logo: 5%</p>
+                        <p class="hint">Basierend auf der Häufigkeit des Erscheinens auf einer Gewinnlinie.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="idk">
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>a</p>
+                <p>B</p>
+            </section>
+
+        </div>
+
+    </div>
+    <!--- End Homepage --->
+
+    <!--- Start Footer --->
+    <div class="footer">
+        <div class="footer-content-wrapper">
+
+            <div class="footer-section legal-links">
+                <h4>Rechtliches & Sicherheit</h4>
+                <ul>
+                    <li><a href="_Impressum.html">Impressum</a></li>
+                    <li><a href="_Datenschutz.html">Datenschutzerklärung</a></li>
+                    <li><a href="_AGB.html">Allgemeine Geschäftsbedingungen (AGB)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h4>Kontakt</h4>
+                <p>Book of Hubert DHBW GmbH</p>
+                <p>Musterstraße 12</p>
+                <p>12345 Musterstadt</p>
+                <p>E-Mail: support@bookofhubert-dhbw.de</p>
+            </div>
+
+            <div class="footer-section responsible-gaming">
+                <h4>Spielerschutz</h4>
+                <p>&copy; 2025 Book of Hubert Slot</p>
+                <p>Glücksspiel kann süchtig machen. Spiele verantwortungsbewusst.</p>
+                <p>Altersfreigabe: 18+</p>
+            </div>
+
+        </div>
+    </div>
+    <!--- End Footer --->
+
+
+</div>
+
+</body>
+</html>

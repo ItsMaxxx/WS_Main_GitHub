@@ -1,0 +1,36 @@
+/* register.css */
+
+/* Stellt sicher, dass die Checkboxen korrekt dargestellt werden */
+.checkbox-row {
+    margin-bottom: 0.75rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #c9d1d9;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    /* Style der Checkboxen anpassen, falls nötig */
+    width: 16px;
+    height: 16px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+}
+
+/* Anpassung der Überschrift, da die Formularseite länger ist */
+.login-card h2 {
+    font-size: 1.5rem;
+}
+
+/* Macht das Formular auf Mobilgeräten scrollbar, da es viele Felder hat */
+@media (max-height: 800px) {
+    .login-container {
+        /* Erlaubt dem Container, kleiner zu werden und zu scrollen, wenn der Inhalt zu lang ist */
+        min-height: auto;
+    }
+}
