@@ -1,0 +1,206 @@
+/* shop.css - Styling fuer den Shop im Dark Mode/Gaming-Stil */
+
+/* --- Allgemeine Layouts und Container --- */
+
+.shop-content-page {
+    grid-column: 1 / span 12;
+    grid-row: 2 / 3;
+
+    background-color: #0d1117; /* Dunkler Hintergrund */
+    color: #e6eef8;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+
+    font-family: Arial, sans-serif;
+}
+
+.shop-content-page h2 {
+    color: #c9d1d9;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+.shop-content-page .section-title {
+    color: #e6eef8;
+}
+
+.shop-content-page .section-hint {
+    color: #9aa8b8;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Guthaben-Bar (Wichtig fuer den Shop) --- */
+.shop-guthaben-bar {
+    max-width: 1400px;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.5rem;
+    background-color: #1a2029; /* Dunkle Akzent-Bar */
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+.shop-guthaben-bar h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #c9d1d9;
+}
+
+.shop-guthaben-bar span {
+    color: #58c8a1; /* Grüner Akzent für den Wert */
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+/* --- Badge Styling (Für Limited-Time / Bonus) --- */
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.time-badge {
+    background-color: #f85149; /* Rot für Zeitlimit */
+    color: #fff;
+}
+
+.bonus-badge {
+    background-color: #2e7bff; /* Blau für Bonus */
+    color: #fff;
+}
+
+.promo-badge {
+    background-color: #ff9800; /* Orange für Neu/Promo */
+    color: #0d1117;
+}
+
+
+/* --- 1. Sektion: Special Offers (3-Spalten-Layout) --- */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.offer-card {
+    position: relative;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    border-color: #58c8a1;
+}
+
+.item-visual {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.offer-card h3 {
+    color: #58c8a1;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-description {
+    color: #9aa8b8;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* --- 2. Sektion: Standard Packs (4-Spalten-Layout) --- */
+.packs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pack-card {
+    position: relative;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.pack-card:hover {
+    box-shadow: 0 0 15px rgba(88, 200, 161, 0.3);
+}
+
+.pack-visual {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.pack-card h3 {
+    color: #e6eef8;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.pack-card p {
+    color: #c9d1d9;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Hervorhebung des grossen Bonus-Pakets */
+.large-pack-bonus {
+    border-color: #2e7bff !important;
+    background-color: #1a2a3e !important;
+}
+
+
+/* --- Button Styling (Einheitlich) --- */
+.buy-button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #58c8a1;
+    color: #0d1117;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.buy-button:hover {
+    background-color: #71d8b6;
+}
+
+/* --- Responsive Anpassungen --- */
+@media (max-width: 768px) {
+    .offers-grid, .packs-grid {
+        grid-template-columns: 1fr;
+    }
+    .shop-content-page {
+        padding: 1rem;
+    }
+    .shop-guthaben-bar {
+        font-size: 0.9rem;
+    }
+}

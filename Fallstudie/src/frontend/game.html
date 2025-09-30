@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Book of DHBW - Slot Machine</title>
+
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="game.css">
+
+    <script>
+        function goToHome() {
+            window.location.href = 'homepage.html';
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="grid-container">
+
+    <div class="header">
+        <div class="header-left">
+            <div class="logo-placeholder" onclick="goToHome()" style="cursor: pointer;">
+                <span>DHBW Slot</span>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+        </div>
+
+        <div class="header-right">
+            <button class="lang-button">🇩🇪 DE</button>
+
+            <button class="login-button" onclick="window.location.href='homepage.html'">Logout</button>
+
+            <button class="register-button primary-accent" onclick="window.location.href='shop.html'">Shop</button>
+        </div>
+    </div>
+
+    <main class="game-content-page">
+
+        <div class="game-dashboard">
+
+            <div class="status-bar">
+                <div class="balance-info current-coins">Coins: <span>12.500</span></div>
+                <div class="balance-info current-bet">Einsatz: <span>100</span></div>
+                <div class="balance-info free-spins">Freispiele: <span>3</span></div>
+                <div class="win-display">Letzter Gewinn: <span>0</span></div>
+            </div>
+
+            <div class="slot-machine-area">
+
+                <div class="slot-display">
+                    <div class="trommel" id="trommel1">
+                        <div class="kachel">💰</div>
+                    </div>
+                    <div class="trommel" id="trommel2">
+                        <div class="kachel">🎓</div>
+                    </div>
+                    <div class="trommel" id="trommel3">
+                        <div class="kachel">💎</div>
+                    </div>
+                    <div class="trommel" id="trommel4">
+                        <div class="kachel">📚</div>
+                    </div>
+                    <div class="trommel" id="trommel5">
+                        <div class="kachel">👑</div>
+                    </div>
+                </div>
+
+                <div class="win-line"></div>
+
+                <div class="win-message hidden" id="winMessage">JACKPOT! +1000 COINS!</div>
+            </div>
+
+            <div class="slot-controls">
+
+                <div class="bet-selection">
+                    <label for="einsatz">Einsatz wählen:</label>
+                    <select id="einsatz">
+                        <option value="10">10 Coins</option>
+                        <option value="50">50 Coins</option>
+                        <option value="100" selected>100 Coins</option>
+                        <option value="200">200 Coins</option>
+                    </select>
+                </div>
+
+                <div class="spin-buttons">
+                    <button class="spin-btn primary-action" id="manualSpin">SPIN</button>
+                    <button class="spin-btn auto-spin-btn" id="autoSpin">AUTO SPIN</button>
+                </div>
+
+            </div>
+
+            <div class="character-info">
+                <h3>Hubert der Studierende</h3>
+                <div class="level-bar">Level 3 | XP: 1500 / 2000</div>
+                <button class="game-btn char-btn">Charakter bearbeiten</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!--- Start Footer --->
+    <div class="footer">
+        <div class="footer-content-wrapper">
+
+            <div class="footer-section legal-links">
+                <h4>Rechtliches & Sicherheit</h4>
+                <ul>
+                    <li><a href="_Impressum.html">Impressum</a></li>
+                    <li><a href="_Datenschutz.html">Datenschutzerklärung</a></li>
+                    <li><a href="_AGB.html">Allgemeine Geschäftsbedingungen (AGB)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h4>Kontakt</h4>
+                <p>Book of DHBW GmbH</p>
+                <p>Musterstraße 12</p>
+                <p>12345 Musterstadt</p>
+                <p>E-Mail: support@bookofdhbw.de</p>
+            </div>
+
+            <div class="footer-section responsible-gaming">
+                <h4>Spielerschutz</h4>
+                <p>&copy; 2025 Book of DHBW Slot</p>
+                <p>Glücksspiel kann süchtig machen. Spiele verantwortungsbewusst.</p>
+                <p>Altersfreigabe: 18+</p>
+            </div>
+
+        </div>
+    </div>
+    <!--- End Footer --->
+
+</div>
+</body>
+</html>

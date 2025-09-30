@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Book of DHBW - Shop</title>
+
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="shop.css">
+
+  <script>
+    function goToHome() {
+      window.location.href = 'homepage.html';
+    }
+  </script>
+</head>
+
+<body>
+
+<div class="grid-container">
+
+  <div class="header">
+    <div class="header-left">
+      <div class="logo-placeholder" onclick="goToHome()" style="cursor: pointer;">
+        <span>DHBW Slot</span>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+    </div>
+
+    <div class="header-right">
+      <button class="lang-button">🇩🇪 DE</button>
+
+      <button class="login-button" onclick="window.location.href='homepage.html'">Logout</button>
+
+      <button class="register-button primary-accent" onclick="window.location.href='game.html'">Zurück</button>
+    </div>
+  </div>
+
+  <main class="shop-content-page">
+
+    <div class="shop-guthaben-bar">
+      <h2>Dein aktuelles Guthaben: <span>12.500 Coins</span></h2>
+    </div>
+
+    <section class="shop-section shop-specials">
+      <h2 class="section-title">⭐ Exklusive Shop-Angebote</h2>
+      <p class="section-hint">Nur für kurze Zeit verfügbar! Jetzt zugreifen, solange der Vorrat reicht.</p>
+
+      <div class="offers-grid">
+
+        <div class="offer-card limited-time">
+          <span class="badge time-badge">Endet in 2h 30m</span>
+          <div class="item-visual">
+            <span class="icon">✨</span>
+          </div>
+          <h3>Legendärer Professor Skin</h3>
+          <p class="item-description">Schaltet den exklusiven Charakter-Skin "Der Unfehlbare" frei.</p>
+          <button class="buy-button">Kaufen für 2.500 Coins</button>
+        </div>
+
+        <div class="offer-card coin-bonus">
+          <span class="badge bonus-badge">+20% Bonus</span>
+          <div class="item-visual">
+            <span class="icon">💰</span>
+          </div>
+          <h3>Massives Coin-Bundle</h3>
+          <p class="item-description">Enthält 10.000 Coins + 2.000 Coins Bonus!</p>
+          <button class="buy-button">Kaufen für 9,99 €</button>
+        </div>
+
+        <div class="offer-card special-item">
+          <span class="badge promo-badge">Neu</span>
+          <div class="item-visual">
+            <span class="icon">🚀</span>
+          </div>
+          <h3>Spin-Speed-Booster</h3>
+          <p class="item-description">Erhöht die Autospin-Geschwindigkeit für 24 Stunden.</p>
+          <button class="buy-button">Kaufen für 500 Coins</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-section shop-standard-packs">
+      <h2 class="section-title">Coins Aufladen</h2>
+      <p class="section-hint">Wählen Sie Ihr Coin-Paket, um weiterzuspielen.</p>
+
+      <div class="packs-grid">
+        <div class="pack-card">
+          <div class="pack-visual"><span class="icon">🪙</span></div>
+          <h3>Kleiner Stapel</h3>
+          <p>1.000 Coins</p>
+          <button class="buy-button small-pack">Kaufen für 0,99 €</button>
+        </div>
+        <div class="pack-card">
+          <div class="pack-visual"><span class="icon">🪙🪙</span></div>
+          <h3>Große Kiste</h3>
+          <p>5.500 Coins</p>
+          <button class="buy-button medium-pack">Kaufen für 4,99 €</button>
+        </div>
+        <div class="pack-card">
+          <div class="pack-visual"><span class="icon">🪙🪙🪙</span></div>
+          <h3>Schatzkammer</h3>
+          <p>12.000 Coins</p>
+          <button class="buy-button large-pack">Kaufen für 9,99 €</button>
+        </div>
+
+        <div class="pack-card large-pack-bonus">
+          <span class="badge bonus-badge">+3.000 GRATIS</span>
+          <div class="pack-visual"><span class="icon">👑</span></div>
+          <h3>Königliches Paket</h3>
+          <p>30.000 Coins</p>
+          <button class="buy-button king-pack">Kaufen für 19,99 €</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!--- Start Footer --->
+  <div class="footer">
+    <div class="footer-content-wrapper">
+
+      <div class="footer-section legal-links">
+        <h4>Rechtliches & Sicherheit</h4>
+        <ul>
+          <li><a href="_Impressum.html">Impressum</a></li>
+          <li><a href="_Datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="_AGB.html">Allgemeine Geschäftsbedingungen (AGB)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-info">
+        <h4>Kontakt</h4>
+        <p>Book of DHBW GmbH</p>
+        <p>Musterstraße 12</p>
+        <p>12345 Musterstadt</p>
+        <p>E-Mail: support@bookofdhbw.de</p>
+      </div>
+
+      <div class="footer-section responsible-gaming">
+        <h4>Spielerschutz</h4>
+        <p>&copy; 2025 Book of DHBW Slot</p>
+        <p>Glücksspiel kann süchtig machen. Spiele verantwortungsbewusst.</p>
+        <p>Altersfreigabe: 18+</p>
+      </div>
+
+    </div>
+  </div>
+  <!--- End Footer --->
+
+</div>
+</body>
+</html>
