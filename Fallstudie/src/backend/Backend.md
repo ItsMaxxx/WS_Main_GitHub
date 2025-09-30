@@ -1,5 +1,8 @@
 # Backend Goals
 
+## Datenbank
+- Ist halt die Datenhaltung
+
 ## Zufallsgenerator (RNG/PRNG): 
 - Die Logik zur Generierung von Pseudozufallszahlen, um die Fairness und Unvorhersehbarkeit der Walzendrehungen zu gewährleisten.
 
