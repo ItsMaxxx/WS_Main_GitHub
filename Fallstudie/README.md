@@ -1,9 +1,9 @@
 # Fallstudie
 
-## backend
+## Backend
 - Fürs Erste nur die Datenbank
 
-## frontend
+## Frontend
 <img width="155" height="269" alt="image" src="https://github.com/user-attachments/assets/96ef1aab-ef32-49ae-8b84-9065eae1abc7" />
 
 - homepage ist die Landing Page
