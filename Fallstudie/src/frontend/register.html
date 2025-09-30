@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Book of Hubert - Registrierung</title>
+    <title>Book of DHBW - Registrierung</title>
 
     <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="login.css"> <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
     <script>
         function goToHome() {
             window.location.href = 'homepage.html';
@@ -17,8 +19,23 @@
 <body>
 
 <div class="header">
-    <h1 onclick="goToHome()" style="cursor: pointer;">Book Of Hubert Slot</h1>
-    <button onclick="window.location.href='login.html'">Login</button>
+    <div class="header-left">
+        <div class="logo-placeholder" onclick="goToHome()" style="cursor: pointer;">
+            <span>DHBW Slot</span>
+        </div>
+    </div>
+
+    <div class="header-center">
+        <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+    </div>
+
+    <div class="header-right">
+        <button class="lang-button">🇩🇪 DE</button>
+
+        <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+
+        <button class="register-button primary-accent" onclick="window.location.href='register.html'">Registrieren</button>
+    </div>
 </div>
 
 <div class="login-page">
@@ -27,7 +44,7 @@
             <div class="illustration-placeholder">
                 <img src="placeholder_illustration.png" alt="Charakter Level Up Symbol">
             </div>
-            <h2>Level Up mit dem Book of Hubert!</h2>
+            <h2>Level Up mit dem Book of DHBW!</h2>
             <p>Sammeln Sie Erfahrungspunkte, verbessern Sie Ihren Charakter und schalten Sie exklusive Skins im Shop frei.</p>
         </div>
 

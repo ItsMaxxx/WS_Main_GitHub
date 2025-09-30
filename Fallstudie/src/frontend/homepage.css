@@ -10,8 +10,98 @@
 }
 /*---------------------------------------------------------Styling für den Header-------------------------------------*/
 
-.header{
-    background-color: powderblue;
+/* Styling für den Header im Lendermarket-Stil (Dark Mode) */
+
+.header {
+    /* 3-Spalten-Layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Dunkler Hintergrund, etwas heller als der Body-BG */
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 0.75rem 2rem;
+    height: 60px; /* Feste Höhe beibehalten */
+
+    /* Wichtig für position: sticky */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Linker Bereich: Logo --- */
+.header-left {
+    flex-grow: 0;
+    min-width: 150px;
+}
+
+.logo-placeholder span {
+    color: #e6eef8; /* Heller Text für das Logo */
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* --- Mittlerer Bereich: Großer Name --- */
+.header-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header-center h1 {
+    /* Stil für den großen Namen in der Mitte */
+    margin: 0;
+    font-size: 1.7rem;
+    color: #c9d1d9;
+    font-weight: 300; /* Etwas leichter, um modern zu wirken */
+    letter-spacing: 2px;
+}
+
+
+/* --- Rechter Bereich: Buttons --- */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right button {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+}
+
+/* Sprachbutton (Minimaler Stil) */
+.lang-button {
+    background: transparent;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+.lang-button:hover {
+    background-color: #252d38;
+}
+
+/* Login Button (Sekundär) */
+.login-button {
+    background: #252d38;
+    color: #c9d1d9;
+}
+.login-button:hover {
+    background-color: #30363d;
+}
+
+/* Register Button (Primäre Akzentfarbe, Lila/Grün) */
+.register-button.primary-accent {
+    /* Verwendung deiner Akzentfarbe, z.B. das Grün aus homepage.css */
+    background-color: #58c8a1;
+    color: #0d1117;
+}
+.register-button.primary-accent:hover {
+    background-color: #71d8b6;
 }
 /*---------------------------------------------------------Styling für die Homepage-----------------------------------*/
 

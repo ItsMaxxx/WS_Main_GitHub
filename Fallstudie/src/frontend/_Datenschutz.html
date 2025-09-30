@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Book of Hubert - Datenschutz</title>
+    <title>Book of DHBW - Datenschutz</title>
 
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="homepage.css">
@@ -21,8 +21,23 @@
 <div class="grid-container">
 
     <div class="header">
-        <h1 onclick="goToHome()" style="cursor: pointer;">Book Of Hubert Slot</h1>
-        <button onclick="window.location.href='login.html'">Login</button>
+        <div class="header-left">
+            <div class="logo-placeholder" onclick="goToHome()" style="cursor: pointer;">
+                <span>DHBW Slot</span>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+        </div>
+
+        <div class="header-right">
+            <button class="lang-button">🇩🇪 DE</button>
+
+            <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+
+            <button class="register-button primary-accent" onclick="window.location.href='register.html'">Registrieren</button>
+        </div>
     </div>
 
     <main class="legal-content-page">
@@ -40,7 +55,7 @@
                     12345 Musterstadt, Deutschland
                 </p>
                 <p>
-                    E-Mail: support@bookofhubert-dhbw.de<br>
+                    E-Mail: support@bookofdhbw.de<br>
                     Datenschutzbeauftragter: <b>Ben Lorenz</b>
                 </p>
             </section>
@@ -111,7 +126,7 @@
 
     <div class="footer">
         <div class="footer-content-wrapper">
-            <p>&copy; 2025 Book of Hubert Slot | <span onclick="window.location.href='impressum.html'" style="cursor: pointer;">Impressum</span></p>
+            <p>&copy; 2025 Book of DHBW | <span onclick="window.location.href='impressum.html'" style="cursor: pointer;">Datenschutzerklärung</span></p>
         </div>
     </div>
 

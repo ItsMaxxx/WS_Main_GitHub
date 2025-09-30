@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Book of Hubert - Slot Machine</title>
+    <title>Book of DHBW - Slot Machine</title>
 
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="login.css">
     <script>
         function goToHome() {
@@ -17,7 +18,23 @@
 <body>
 
 <div class="header">
-    <h1 onclick="goToHome()" style="cursor: pointer;">Book Of Hubert Slot</h1>
+    <div class="header-left">
+        <div class="logo-placeholder" onclick="goToHome()" style="cursor: pointer;">
+            <span>DHBW Slot</span>
+        </div>
+    </div>
+
+    <div class="header-center">
+        <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+    </div>
+
+    <div class="header-right">
+        <button class="lang-button">🇩🇪 DE</button>
+
+        <button class="login-button" onclick="window.location.href='login.html'">Login</button>
+
+        <button class="register-button primary-accent" onclick="window.location.href='register.html'">Registrieren</button>
+    </div>
 </div>
 
 <div class="login-page hidden">
