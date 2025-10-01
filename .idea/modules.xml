@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FakeCubeGame/FakeCubeGame.iml" filepath="$PROJECT_DIR$/FakeCubeGame/FakeCubeGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fallstudie/Fallstudie.iml" filepath="$PROJECT_DIR$/Fallstudie/Fallstudie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Grundlagen_Der_Programmierung/Grundlagen_Der_Programmierung.iml" filepath="$PROJECT_DIR$/Grundlagen_Der_Programmierung/Grundlagen_Der_Programmierung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetcodeProblems/LeetcodeProblems.iml" filepath="$PROJECT_DIR$/LeetcodeProblems/LeetcodeProblems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Toolbox/Toolbox.iml" filepath="$PROJECT_DIR$/Toolbox/Toolbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Toolbox/src/Toolbox2.iml" filepath="$PROJECT_DIR$/Toolbox/src/Toolbox2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/WS_Main_GitHub.iml" filepath="$PROJECT_DIR$/.idea/WS_Main_GitHub.iml" />
+    </modules>
+  </component>
+</project>
