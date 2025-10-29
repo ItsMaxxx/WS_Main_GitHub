@@ -25,8 +25,15 @@
         </div>
     </div>
 
-    <div class="header-center">
-        <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+    <div class="main-nav-center">
+        <div class="header-title" aria-label="Book of DHBW">
+            <span>Book&nbsp;</span>
+            <span class="logo-o" aria-hidden="true" onclick="goToHome()" style="cursor: pointer;">
+                <img src="../images/LOGO.png" height="1024" width="1024"/>
+            </span>
+            <span>f</span>
+            <span>&nbsp;&nbsp;DHBW</span>
+        </div>
     </div>
 
     <div class="header-right">
@@ -42,7 +49,7 @@
     <div class="login-container">
         <div class="login-info-box">
             <div class="illustration-placeholder">
-                <img src="placeholder_illustration.png" alt="Charakter Level Up Symbol">
+                <img src="../images/SLOT.jpg" alt="Charakter Level Up Symbol">
             </div>
             <h2>Level Up mit dem Book of DHBW!</h2>
             <p>Sammeln Sie Erfahrungspunkte, verbessern Sie Ihren Charakter und schalten Sie exklusive Skins im Shop frei.</p>
@@ -64,19 +71,17 @@
 
                 <div class="field">
                     <label for="reg_password">Passwort</label>
-                    <input id="reg_password" name="password" type="password" required minlength="8" placeholder="Mind. 8 Zeichen" />
-                    <span class="hint">Mindestens 8 Zeichen, Zahlen & Sonderzeichen empfohlen.</span>
+                    <input id="reg_password" name="password" type="email" required minlength="8" placeholder="Mind. 8 Zeichen" />
                 </div>
 
                 <div class="field">
                     <label for="reg_confirm">Passwort wiederholen</label>
-                    <input id="reg_confirm" name="confirm" type="password" required minlength="8" placeholder="Passwort wiederholen" />
+                    <input id="reg_confirm" name="confirm" type="email" required minlength="8" placeholder="Passwort wiederholen" />
                 </div>
 
                 <div class="field">
                     <label for="reg_birth">Geburtsdatum</label>
-                    <input id="reg_birth" name="birthdate" type="date" required />
-                    <span class="hint">Mindestalter 18 Jahre erforderlich.</span>
+                    <input id="reg_birth" name="birthdate" type="email" required />
                 </div>
 
                 <div class="field checkbox-row">
@@ -94,7 +99,7 @@
                 </div>
 
                 <div class="actions">
-                    <button id="registerBtn" type="submit" class="primary login-btn">Account erstellen</button>
+                    <button id="registerBtn" type="button" class="primary login-btn" onclick="window.location.href='login.html'">Account erstellen</button>
                 </div>
 
                 <p class="signup-prompt">

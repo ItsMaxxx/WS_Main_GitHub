@@ -1,21 +1,18 @@
-/* shop.css - Styling fuer den Shop im Dark Mode/Gaming-Stil */
+/* shop.css - Farbanpassung Slot-Stil */
 
 /* --- Allgemeine Layouts und Container --- */
-
 .shop-content-page {
     grid-column: 1 / span 12;
     grid-row: 2 / 3;
-
-    background-color: #0d1117; /* Dunkler Hintergrund */
-    color: #e6eef8;
+    background: radial-gradient(ellipse at 50% 49%, #801903 39%, #470d08 100%);
+    color: #e8b93c;
     padding: 2rem 1.5rem;
     overflow-y: auto;
-
     font-family: Arial, sans-serif;
 }
 
 .shop-content-page h2 {
-    color: #c9d1d9;
+    color: #ffd700;
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 2rem;
@@ -24,32 +21,31 @@
 }
 
 .shop-content-page .section-title {
-    color: #e6eef8;
+    color: #ffd700;
 }
-
 .shop-content-page .section-hint {
-    color: #9aa8b8;
+    color: #ffeeba;
     margin-bottom: 1.5rem;
 }
 
-/* --- Guthaben-Bar (Wichtig fuer den Shop) --- */
+/* --- Guthaben-Bar (Shopleiste) --- */
 .shop-guthaben-bar {
     max-width: 1400px;
     margin: 0 auto 2rem;
     padding: 1rem 1.5rem;
-    background-color: #1a2029; /* Dunkle Akzent-Bar */
+    background-color: #7c340d;
     border-radius: 8px;
-    border: 1px solid #30363d;
+    border: 2px solid #be7f18;
 }
 
 .shop-guthaben-bar h2 {
     margin: 0;
     font-size: 1.2rem;
-    color: #c9d1d9;
+    color: #ffd700;
 }
 
 .shop-guthaben-bar span {
-    color: #58c8a1; /* Grüner Akzent für den Wert */
+    color: #ffd700;
     font-weight: 700;
     font-size: 1.4rem;
     margin-left: 10px;
@@ -65,24 +61,21 @@
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 4px #470d08c0;
 }
 
 .time-badge {
-    background-color: #f85149; /* Rot für Zeitlimit */
-    color: #fff;
+    background-color: #a02d18;
+    color: #ffd700;
 }
-
 .bonus-badge {
-    background-color: #2e7bff; /* Blau für Bonus */
-    color: #fff;
+    background-color: #ffd700;
+    color: #a02d18;
 }
-
 .promo-badge {
-    background-color: #ff9800; /* Orange für Neu/Promo */
-    color: #0d1117;
+    background-color: #be7f18;
+    color: #fffbe7;
 }
-
 
 /* --- 1. Sektion: Special Offers (3-Spalten-Layout) --- */
 .offers-grid {
@@ -95,34 +88,35 @@
 
 .offer-card {
     position: relative;
-    background-color: #161b22;
-    border: 1px solid #30363d;
+    background-color: #7c340d;
+    border: 2px solid #be7f18;
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
     transition: transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px #7c340d99;
 }
 
 .offer-card:hover {
     transform: translateY(-5px);
-    border-color: #58c8a1;
+    border-color: #ffd700;
 }
 
 .item-visual {
     font-size: 3rem;
     margin-bottom: 0.5rem;
     line-height: 1;
+    color: #ffd700;
 }
 
 .offer-card h3 {
-    color: #58c8a1;
+    color: #ffd700;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
 .item-description {
-    color: #9aa8b8;
+    color: #ffeeba;
     margin-bottom: 1.5rem;
     font-size: 0.9rem;
 }
@@ -138,8 +132,8 @@
 
 .pack-card {
     position: relative;
-    background-color: #161b22;
-    border: 1px solid #30363d;
+    background-color: #7c340d;
+    border: 2px solid #be7f18;
     border-radius: 8px;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -147,32 +141,32 @@
 }
 
 .pack-card:hover {
-    box-shadow: 0 0 15px rgba(88, 200, 161, 0.3);
+    box-shadow: 0 0 15px #ffd70077;
 }
 
 .pack-visual {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #ffd700;
 }
 
 .pack-card h3 {
-    color: #e6eef8;
+    color: #ffd700;
     font-size: 1.1rem;
     margin-bottom: 5px;
 }
 
 .pack-card p {
-    color: #c9d1d9;
+    color: #ffeeba;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 /* Hervorhebung des grossen Bonus-Pakets */
 .large-pack-bonus {
-    border-color: #2e7bff !important;
-    background-color: #1a2a3e !important;
+    border-color: #ffd700 !important;
+    background-color: #be7f18 !important;
 }
-
 
 /* --- Button Styling (Einheitlich) --- */
 .buy-button {
@@ -180,16 +174,18 @@
     padding: 10px 15px;
     border-radius: 6px;
     border: none;
-    background-color: #58c8a1;
-    color: #0d1117;
+    background: linear-gradient(180deg, #e8b93c 80%, #ffd700 100%);
+    color: #a02d18;
     font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
-    transition: background-color 0.2s;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
 }
 
 .buy-button:hover {
-    background-color: #71d8b6;
+    background: linear-gradient(180deg, #ffd700 90%, #e8b93c 100%);
+    color: #633300;
 }
 
 /* --- Responsive Anpassungen --- */
@@ -203,4 +199,26 @@
     .shop-guthaben-bar {
         font-size: 0.9rem;
     }
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 20;
+}
+
+.header-balance {
+    background: linear-gradient(135deg, #2a5d1e 0%, #1e4316 100%);
+    color: #d4f5c8;
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px #00000044, inset 0 1px 2px #ffffff33;
+    border: 2px solid #4a8f3a;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 20;
 }

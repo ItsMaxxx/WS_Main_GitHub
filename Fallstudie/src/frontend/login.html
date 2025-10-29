@@ -24,8 +24,15 @@
         </div>
     </div>
 
-    <div class="header-center">
-        <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+    <div class="main-nav-center">
+        <div class="header-title" aria-label="Book of DHBW">
+            <span>Book&nbsp;</span>
+            <span class="logo-o" aria-hidden="true" onclick="goToHome()" style="cursor: pointer;">
+                <img src="../images/LOGO.png" height="1024" width="1024"/>
+            </span>
+            <span>f</span>
+            <span>&nbsp;&nbsp;DHBW</span>
+        </div>
     </div>
 
     <div class="header-right">
@@ -42,10 +49,10 @@
         <!-- Linke Haelfte -->
         <div class="login-info-box">
             <div class="illustration-placeholder">
-                <img src="placeholder_illustration.png" alt="	Schatzjagd Illustration oder Glücksbringer">
+                <img src="../images/redHAPPY-Photoroom.png" alt="	Schatzjagd Illustration oder Glücksbringer">
             </div>
             <h2>Ihre Chance auf den nächsten DHBW Jackpot!</h2>
-            <p>Starten Sie jetzt Ihre Jagd nach den höchsten Multiplikatoren und Freispielen.</p>
+            <p>Starten Sie jetzt in ihr eigenes, spannendes Abenteuer voller Gewinne</p>
         </div>
 
         <!-- Rechte Haelfte -->
@@ -63,7 +70,7 @@
                 <div class="field">
                     <div class="row-between">
                         <label for="password">Passwort</label>
-                        <a class="link pw-forgot-link" href="#" id="forgot">Passwort vergessen?</a>
+                        <a class="link pw-forgot-link"  id="forgot" href="mailto:schmelzer2040@gmail.com">Passwort vergessen?</a>
                     </div>
                     <div class="pw-row styled-input">
                         <input id="password" name="password" type="password" autocomplete="current-password" required
@@ -74,16 +81,14 @@
                 </div>
 
                 <div class="actions">
-                    <button id="loginBtn" type="submit" class="primary login-btn">Login</button>
+                    <button id="loginBtn" type="button" class="primary login-btn" onclick="window.location.href='Slot.html'">Login</button>
                 </div>
 
                 <p class="signup-prompt">
                     <a class="link" href="register.html" id="signupBtn">Registrieren</a>
                 </p>
 
-                <p class="signup-prompt">
-                    <a class="link" href="game.html" id="signupBtn">Ich bin schon eingeloggt (Test)</a>
-                </p>
+
 
                 <div id="formMessage" role="status" aria-live="polite" class="form-message"></div>
             </form>

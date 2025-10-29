@@ -27,24 +27,36 @@
       </div>
     </div>
 
-    <div class="header-center">
-      <h1 onclick="goToHome()" style="cursor: pointer;">BOOK OF DHBW</h1>
+    <div class="main-nav-center">
+      <div class="header-title" aria-label="Book of DHBW">
+        <span>Book&nbsp;</span>
+        <span class="logo-o" aria-hidden="true" onclick="goToHome()" style="cursor: pointer;">
+                <img src="../images/LOGO.png" height="1024" width="1024"/>
+            </span>
+        <span>f</span>
+        <span>&nbsp;&nbsp;DHBW</span>
+      </div>
     </div>
 
     <div class="header-right">
       <button class="lang-button">🇩🇪 DE</button>
 
+      <div class="nav-right">
+        <div class="header-balance" id="headerBalance">
+          <span>💰</span>
+          <span id="headerBalanceAmount">1000</span>
+        </div>
+      </div>
+
       <button class="login-button" onclick="window.location.href='homepage.html'">Logout</button>
 
-      <button class="register-button primary-accent" onclick="window.location.href='game.html'">Zurück</button>
+      <button class="register-button primary-accent" onclick="window.location.href='Slot.html'">Zurück</button>
     </div>
   </div>
 
   <main class="shop-content-page">
 
-    <div class="shop-guthaben-bar">
-      <h2>Dein aktuelles Guthaben: <span>12.500 Coins</span></h2>
-    </div>
+
 
     <section class="shop-section shop-specials">
       <h2 class="section-title">⭐ Exklusive Shop-Angebote</h2>
@@ -53,7 +65,7 @@
       <div class="offers-grid">
 
         <div class="offer-card limited-time">
-          <span class="badge time-badge">Endet in 2h 30m</span>
+          <span class="badge time-badge">Endet in 3 Tagen</span>
           <div class="item-visual">
             <span class="icon">✨</span>
           </div>
@@ -69,7 +81,7 @@
           </div>
           <h3>Massives Coin-Bundle</h3>
           <p class="item-description">Enthält 10.000 Coins + 2.000 Coins Bonus!</p>
-          <button class="buy-button">Kaufen für 9,99 €</button>
+          <button class="buy-button">Kaufen für 14,99 €</button>
         </div>
 
         <div class="offer-card special-item">
@@ -77,8 +89,8 @@
           <div class="item-visual">
             <span class="icon">🚀</span>
           </div>
-          <h3>Spin-Speed-Booster</h3>
-          <p class="item-description">Erhöht die Autospin-Geschwindigkeit für 24 Stunden.</p>
+          <h3>Multiplikator-Booster</h3>
+          <p class="item-description">Rechnet einen extra 2x Booster auf den Gewinn. Hält 1h.</p>
           <button class="buy-button">Kaufen für 500 Coins</button>
         </div>
       </div>
@@ -93,27 +105,29 @@
           <div class="pack-visual"><span class="icon">🪙</span></div>
           <h3>Kleiner Stapel</h3>
           <p>1.000 Coins</p>
-          <button class="buy-button small-pack">Kaufen für 0,99 €</button>
+          <button class="buy-button small-pack">Kaufen für 1,99 €</button>
         </div>
         <div class="pack-card">
+          <span class="badge bonus-badge">+500 GRATIS</span>
           <div class="pack-visual"><span class="icon">🪙🪙</span></div>
           <h3>Große Kiste</h3>
           <p>5.500 Coins</p>
-          <button class="buy-button medium-pack">Kaufen für 4,99 €</button>
+          <button class="buy-button medium-pack">Kaufen für 9,99 €</button>
         </div>
         <div class="pack-card">
+          <span class="badge bonus-badge">+1.000 GRATIS</span>
           <div class="pack-visual"><span class="icon">🪙🪙🪙</span></div>
           <h3>Schatzkammer</h3>
           <p>12.000 Coins</p>
-          <button class="buy-button large-pack">Kaufen für 9,99 €</button>
+          <button class="buy-button large-pack">Kaufen für 19,99 €</button>
         </div>
 
         <div class="pack-card large-pack-bonus">
-          <span class="badge bonus-badge">+3.000 GRATIS</span>
+          <span class="badge bonus-badge">+4.000 GRATIS</span>
           <div class="pack-visual"><span class="icon">👑</span></div>
           <h3>Königliches Paket</h3>
-          <p>30.000 Coins</p>
-          <button class="buy-button king-pack">Kaufen für 19,99 €</button>
+          <p>40.000 Coins</p>
+          <button class="buy-button king-pack">Kaufen für 59,99 €</button>
         </div>
 
       </div>

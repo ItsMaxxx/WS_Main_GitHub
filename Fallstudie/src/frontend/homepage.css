@@ -1,201 +1,206 @@
-/* homepage.css - Styling für die öffentliche Landing Page im Dashboard-Stil */
+/* homepage.css – Slot-Design */
 
-/* --- Allgemeine Layout-Einstellungen --- */
+
 .homepage {
-    /* Dunkler Hintergrund für das gesamte Dashboard */
-    background-color: #0d1117;
-    color: #e6eef8; /* Helle Standard-Textfarbe */
-    font-family: Arial, sans-serif;
+    background: radial-gradient(ellipse at 50% 49%, #801903 39%, #470d08 100%);
+    color: #e8b93c;
+    font-family: Georgia, 'Segoe UI', serif;
+    margin: 0;
+    min-height: 100vh;
     padding: 2rem 1.5rem;
 }
-/*---------------------------------------------------------Styling für den Header-------------------------------------*/
-
-/* Styling für den Header im Lendermarket-Stil (Dark Mode) */
 
 .header {
-    /* 3-Spalten-Layout */
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* Dunkler Hintergrund, etwas heller als der Body-BG */
-    background-color: #161b22;
-    border-bottom: 1px solid #30363d;
-    padding: 0.75rem 2rem;
-    height: 60px; /* Feste Höhe beibehalten */
-
-    /* Wichtig für position: sticky */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    background: rgba(160,45,24, 0.96);
+    border-bottom: 2px solid #e8b93c;
+    height: 95px;
+    box-shadow: 0 4px 24px #2e08077e;
+    padding: 0 2rem;
+    position: relative;
 }
 
-/* --- Linker Bereich: Logo --- */
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
 .header-left {
     flex-grow: 0;
     min-width: 150px;
 }
 
 .logo-placeholder span {
-    color: #e6eef8; /* Heller Text für das Logo */
+    color: #ffd700;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 0 0 14px #fce9b7, 0 1px 2px #6e360f;
 }
 
-
-/* --- Mittlerer Bereich: Großer Name --- */
 .header-center {
     flex-grow: 1;
-    text-align: center;
+    justify-content: center;
 }
 
 .header-center h1 {
-    /* Stil für den großen Namen in der Mitte */
     margin: 0;
-    font-size: 1.7rem;
-    color: #c9d1d9;
-    font-weight: 300; /* Etwas leichter, um modern zu wirken */
-    letter-spacing: 2px;
+    font-size: 2.1rem;
+    color: #ffd700;
+    text-shadow: 0 0 16px #e8b93c, 0 1px 6px #25070a7a;
+    font-weight: 700;
+    letter-spacing: 3px;
 }
 
-
-/* --- Rechter Bereich: Buttons --- */
 .header-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
-.header-right button {
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-weight: 600;
+.header-right button,
+button,
+.nav-btn {
+    background: linear-gradient(180deg, #fce9b7 85%, #e8b93c 100%);
+    border: 2px solid #be7f18;
+    color: #633300;
+    border-radius: 100px;
+    font-family: 'Segoe UI', Georgia, serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 8px 20px;
+    box-shadow: 0 2px 6px #a97c0e44, 0 0 0 #dea52b inset;
+    transition: background 0.16s, box-shadow 0.15s;
     cursor: pointer;
-    transition: background-color 0.2s;
-    border: none;
+    margin-left: 0.4rem;
 }
 
-/* Sprachbutton (Minimaler Stil) */
-.lang-button {
-    background: #252d38;
-    color: #c9d1d9;
-    border: 1px solid #30363d;
-}
-.lang-button:hover {
-    background-color: #252d38;
+.header-right button:hover,
+button:hover,
+.nav-btn:hover {
+    background: linear-gradient(180deg, #face5a 85%, #ffd700 100%);
+    color: #a64200;
 }
 
-/* Login Button (Sekundär) */
-.login-button {
-    background: #252d38;
-    color: #c9d1d9;
+.header-right .lang-button {
+    background: rgba(160,45,24, 0.15);
+    color: #ffd700;
+    border: 1px solid #be7f18;
+    font-weight: 700;
 }
-.login-button:hover {
-    background-color: #30363d;
+.header-right .lang-button:hover {
+    background: #ffd700;
+    color: #a02d18;
 }
 
-/* Register Button (Primäre Akzentfarbe, Lila/Grün) */
-.register-button.primary-accent {
-    /* Verwendung deiner Akzentfarbe, z.B. das Grün aus homepage.css */
-    background-color: #58c8a1;
-    color: #0d1117;
+.header-right .login-button {
+    background: linear-gradient(180deg, #fce9b7 85%, #e8b93c 100%);
+    color: #633300;
 }
-.register-button.primary-accent:hover {
-    background-color: #71d8b6;
+.header-right .login-button:hover {
+    background: #ffd700;
 }
-/*---------------------------------------------------------Styling für die Homepage-----------------------------------*/
+
+.header-right .register-button.primary-accent {
+    background: #289442;
+    color: #fffbe7;
+    border: 2px solid #fce9b7;
+    box-shadow: 0 1px 10px #fce9b7a5;
+}
+.header-right .register-button.primary-accent:hover {
+    background: #1d613a;
+    color: #ffd700;
+}
 
 .dashboard-layout {
     max-width: 1400px;
-    margin: 0 auto; /* Zentriert den Inhalt */
+    margin: 0 auto;
 }
 
-/* --- Überschriften-Stil --- */
 .homepage h2 {
-    color: #c9d1d9;
+    color: #ffe386;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding-bottom: 0.3rem;
-    border-bottom: 1px solid #30363d; /* Trennlinie wie im Referenzbild */
+    border-bottom: 2px solid #be7f18;
+    text-shadow: 0 1px 4px #5128022f;
 }
 
-/* --- Sektion 1: Statistik-Kacheln (Top Row) --- */
 .stats-grid {
     display: grid;
-    /* 4 gleich breite Spalten, responsive für kleinere Bildschirme */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .stat-card {
-    /* Hintergrund leicht heller als die Hauptseite, mit abgerundeten Ecken */
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
+    background: linear-gradient(180deg, #7c340d 65%, #a02d18 100%);
+    border: 3px solid #be7f18;
+    border-radius: 18px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 28px #a02d1877, 0 0 16px #be7f1866 inset;
+    color: #ffe386;
 }
 
 .stat-card .value {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #58c8a1; /* Akzentfarbe (Grün) für die Werte */
+    color: #ffd700;
+    text-shadow: 0 1px 10px #e8b93c9e;
 }
 
 .stat-card .label {
     font-size: 0.9rem;
-    color: #9aa8b8;
+    color: #f8e8aa;
     text-transform: uppercase;
 }
 
-/* Spezielles Styling für den Call-to-Action-Block */
 .stat-card.primary-cta {
-    background-color: #1a2a3e; /* Dunkelblauer/Akzent-Hintergrund für CTA */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-color: #2e7bff; /* Blauer Rand als visueller Fokus */
+    background: linear-gradient(180deg, #e8b93c 85%, #fffbe7 100%);
+    border-color: #be7f18;
+    color: #914400;
 }
 
 .primary-cta .value {
-    font-size: 1.5rem;
-    color: #2e7bff; /* Blaue Akzentfarbe */
+    font-size: 1.4rem;
+    color: #a02d18;
     margin-bottom: 1rem;
 }
 
 .login-prompt-btn {
     padding: 0.75rem 1.5rem;
-    background-color: #2e7bff; /* Leuchtend blauer Button */
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
+    background: #e8b93c;
+    color: #a02d18;
+    border: 2px solid #ffd700;
+    border-radius: 14px;
+    font-size: 1.08rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s;
+    box-shadow: 0 3px 11px #e8b93c50;
 }
-
 .login-prompt-btn:hover {
-    background-color: #5a9bff;
+    background: #ffd700;
+    color: #633300;
 }
 
-/* --- Sektion 2: Tabelle (Leaderboard) --- */
 .table-container {
     overflow-x: auto;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-    background-color: #161b22; /* Tabelle/Container Hintergrund */
+    border-radius: 14px;
+    border: 2px solid #be7f18;
+    background: #7c340d;
+    margin-top: 2rem;
 }
 
 .data-table {
     width: 100%;
-    border-collapse: collapse; /* Entfernt doppelten Rand */
-    font-size: 0.95rem;
+    border-collapse: collapse;
+    font-size: 1.1rem;
 }
 
 .data-table th,
@@ -205,17 +210,16 @@
 }
 
 .data-table th {
-    /* Header-Reihe wie im Referenzbild */
-    background-color: #2d333b;
-    color: #c9d1d9;
-    font-weight: 600;
-    border-bottom: 1px solid #30363d;
+    background: #be7f18;
+    color: #fffbe7;
+    font-weight: 700;
+    border-bottom: 2px solid #ffd700;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 .data-table tbody tr {
-    border-bottom: 1px solid #1f252c;
+    border-bottom: 1px solid #be7f1836;
 }
 
 .data-table tbody tr:last-child {
@@ -223,11 +227,10 @@
 }
 
 .data-table tbody tr:hover {
-    background-color: #1f252c; /* Leichter Hover-Effekt */
+    background: #a02d18;
+    color: #ffe386;
 }
 
-
-/* --- Sektion 3: Berichte & Infos (Bottom Grid) --- */
 .reports-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -236,55 +239,59 @@
 }
 
 .report-box {
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
+    background: radial-gradient(ellipse at 50% 49%, #801903 39%, #470d08 100%);
+    border: 2px solid #be7f18;
+    border-radius: 18px;
     padding: 1.5rem;
+    color: #ffe386;
+    box-shadow: 0 4px 16px #47170082;
 }
 
 .report-box h3 {
     font-size: 1.2rem;
-    color: #c9d1d9;
+    color: #ffd700;
     margin-bottom: 0.8rem;
+    text-shadow: 0 0 7px #e8b93c5e;
 }
 
 .report-box p {
     margin-bottom: 0.5rem;
     line-height: 1.4;
-    color: #9aa8b8;
+    color: #f8e8aa;
 }
 
 .report-box .hint {
-    font-size: 0.8rem;
-    color: #6a737d;
+    font-size: 0.84rem;
+    color: #ffe386;
     margin-top: 1rem;
     display: block;
+    opacity: 0.8;
 }
 
 .export-btn {
     padding: 0.5rem 1rem;
-    border: 1px solid #58c8a1;
-    background: transparent;
-    color: #58c8a1;
+    border: 2px solid #e8b93c;
+    background: linear-gradient(180deg, #fce9b7 80%, #ffd700 100%);
+    color: #a02d18;
     border-radius: 6px;
     cursor: pointer;
     margin-right: 0.5rem;
     margin-top: 0.8rem;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 700;
 }
-
 .export-btn:hover {
-    background-color: #58c8a1;
-    color: #0d1117;
+    background: #be7f18;
+    color: #fffbe7;
 }
 
-/*---------------------------------------------------------Styling für den Footer-------------------------------------*/
 .footer {
-    background-color: #1a2029; /* Dunkler Hintergrund, etwas kontrastreicher als der Haupt-BG */
-    color: #9aa8b8;
+    background: #470d08;
+    color: #ffd700;
     padding: 2rem 1.5rem;
-    font-size: 0.9rem;
-    border-top: 1px solid #30363d; /* Dezente Trennlinie zum Content */
+    font-size: 1rem;
+    border-top: 2px solid #be7f18;
+    box-shadow: 0 -2px 22px #a02d1842;
 }
 
 .footer-content-wrapper {
@@ -296,10 +303,10 @@
 }
 
 .footer-section h4 {
-    color: #e6eef8;
+    color: #ffd700;
     margin-bottom: 0.8rem;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.13rem;
+    font-weight: 700;
 }
 
 .footer-section ul {
@@ -308,13 +315,13 @@
 }
 
 .footer-section a {
-    color: #9aa8b8;
+    color: #ffe386;
     text-decoration: none;
     line-height: 1.6;
 }
 
 .footer-section a:hover {
-    color: #58c8a1; /* Akzentfarbe für Links */
+    color: #be7f18;
     text-decoration: underline;
 }
 
@@ -324,24 +331,76 @@
 }
 
 /* Responsive Anpassung */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .dashboard-layout {
+        padding: 1rem;
+    }
     .footer-content-wrapper {
         flex-direction: column;
         gap: 20px;
     }
-}
-
-/* --- Responsive Anpassungen --- */
-@media (max-width: 768px) {
-    .homepage {
-        padding: 1rem;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr; /* Alle Kacheln untereinander auf kleinen Geräten */
-    }
-
-    .reports-grid {
+    .stats-grid, .reports-grid {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 600px) {
+    .header-center h1 {
+        font-size: 1.12rem;
+    }
+    .footer-content-wrapper {
+        padding: 0 0.5rem;
+    }
+    .homepage {
+        padding: 0.7rem !important;
+    }
+
+}
+.main-nav-center {
+    position: relative;
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    height: 95px; /* volle Headerhöhe */
+    overflow: visible;
+}
+/* Großer Titel */
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    font-weight: 900;
+    font-size: 3.6rem; /* gut lesbar */
+    color: #e8b93c;
+    text-shadow:
+            0 0 50px #ffd700,
+            1px 1px 3px #b27d15,
+            0 0 10px #ffe066;
+    user-select: none;
+    white-space: nowrap;
+    height: 75px;
+    line-height: 75px;
+}
+.header-title span {
+    margin: 0 4px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+.header-title .logo-o {
+    width: 75px;
+    height: 75px;
+    margin: 0 6px;
+    display: inline-block;
+}
+.header-title .logo-o img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 4px #f8d44b);
+    pointer-events: none;
+    user-select: none;
 }
