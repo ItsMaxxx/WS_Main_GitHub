@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>Book of DHBW Slotmaschine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="slot.css" />
+</head>
+<body>
+<nav class="main-nav">
+    <div class="nav-left">
+        <button class="nav-btn">
+                <span class="nav-icon">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <rect x="6" y="10" width="10" height="7" rx="1.5" fill="#e8b93c" />
+                        <path d="M2 11L11 4L20 11" stroke="#b27d15" stroke-width="2" />
+                        <rect x="9" y="13" width="3" height="4" rx="0.7" fill="#bb9500" />
+                    </svg>
+                </span>
+            <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-btn">
+                <span class="nav-icon">
+                    <svg width="22" height="22" viewBox="0 0 22 22">
+                        <circle cx="8" cy="18" r="2" fill="#e8b93c" />
+                        <circle cx="16" cy="18" r="2" fill="#e8b93c" />
+                        <rect x="4" y="6" width="15" height="8" rx="2" fill="#d9bb7a" stroke="#b27d15" stroke-width="1.6" />
+                        <rect x="7" y="8" width="3" height="4" rx="0.7" fill="#bb9500" />
+                    </svg>
+                </span>
+            <span class="nav-label">Shop</span>
+        </button>
+        <div class="dropdown">
+            <button class="nav-btn" id="skinsBtn" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-label">Skins</span>
+            </button>
+            <ul class="dropdown-menu" id="skinsMenu" hidden>
+                <li>
+                    <button class="dropdown-item" id="skinStandardBtn" type="button">Standard</button>
+                </li>
+                <li>
+                    <button class="dropdown-item" id="skinWhiteBtn" type="button">Weißer Riese</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-nav-center">
+        <div class="header-title" aria-label="Book of DHBW">
+            <span>Book&nbsp;</span>
+            <span class="logo-o" aria-hidden="true">
+                <img src="../images/LOGO.png" height="1024" width="1024"/>
+            </span>
+            <span>f</span>
+            <span>&nbsp;&nbsp;DHBW</span>
+        </div>
+    </div>
+    <div class="nav-right">
+        <div class="header-balance" id="headerBalance">
+            <span>💰</span>
+            <span id="headerBalanceAmount">1000</span>
+        </div>
+        <button class="nav-btn">
+                <span class="nav-icon">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <circle cx="11" cy="8" r="5" fill="#e8b93c" stroke="#b27d15" stroke-width="1.2" />
+                        <ellipse cx="11" cy="17" rx="7" ry="3.4" fill="#d9bb7a" stroke="#b27d15" stroke-width="1" />
+                    </svg>
+                </span>
+            <span class="nav-label">Profil</span>
+        </button>
+    </div>
+</nav>
+<div class="casino-frame"></div>
+<div class="casino-frame-bottom"></div>
+<div class="shine"></div>
+<div class="book-motif"></div>
+<div class="slot-main">
+    <img class="mascot-image" id="mascotImage" src="../images/redNORMAL-Photoroom.png" alt="Slotmaschinen-Wikinger" />
+    <div class="slot-machine">
+        <div class="lever-area" id="leverArea">
+            <div class="lever" id="lever"></div>
+            <div class="lever-knob" id="leverKnob"></div>
+        </div>
+        <div class="reels">
+            <div class="reel" id="reel0"></div>
+            <div class="reel" id="reel1"></div>
+            <div class="reel" id="reel2"></div>
+            <div class="reel" id="reel3"></div>
+        </div>
+        <div class="coins-area">
+            <div class="coins-display" id="coinsDisplay">Einsatz: 10</div>
+            <div class="coins-buttons">
+                <button class="coin-btn" data-change="10">+10</button>
+                <button class="coin-btn" data-change="100">+100</button>
+                <button class="coin-btn" data-change="1000">+1000</button>
+                <button class="coin-btn" data-change="-10">-10</button>
+                <button class="coin-btn" data-change="-100">-100</button>
+                <button class="coin-btn" data-change="-1000">-1000</button>
+            </div>
+        </div>
+        <div class="result-area" id="resultArea"></div>
+        <div class="hint">🎰 Ziehe den Hebel für dein Glück!</div>
+    </div>
+    <div class="rules-panel">
+        <h2>📜 Spielregeln</h2>
+        <p>
+            Ziehe den Hebel, um die vier Walzen zu starten. Jede Walze zeigt drei Symbole. Du gewinnst,
+            wenn bestimmte Kombinationen erscheinen:
+        </p>
+        <ul>
+            <li><strong>"D H B W"</strong> auf einer Linie = Jackpot (x25 Einsatz)</li>
+            <li>Vier gleiche Symbole in einer Linie = Gewinn (x10 Einsatz)</li>
+            <li>Alle anderen Kombinationen = kein Gewinn</li>
+        </ul>
+        <p>Symbole:</p>
+        <ul>
+            <li>D, H, B, W – Buchstaben-Symbole</li>
+            <li>♠ – Joker (ersetzt jedes Symbol)</li>
+        </ul>
+        <p> Tipp: Höherer Einsatz = höherer Gewinn, aber auch höheres Risiko!</p>
+    </div>
+</div>
+<script src="slot.js"></script>
+</body>
+</html>
