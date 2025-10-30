@@ -1,9 +1,13 @@
 // --- Skins Logic ---
+//Skins Button und Dropdown
 const skinsBtn = document.getElementById('skinsBtn');
 const skinsMenu = document.getElementById('skinsMenu');
+
+//Skin Auswahl Buttons
 const skinStandardBtn = document.getElementById('skinStandardBtn');
 const skinWhiteBtn = document.getElementById('skinWhiteBtn');
 
+//
 let normalImg = '../images/redNORMAL-Photoroom.png';
 let happyImg = '../images/redHAPPY-Photoroom.png';
 let sadImg = '../images/redSAD-Photoroom.png';
@@ -49,19 +53,19 @@ skinWhiteBtn.addEventListener('click', () => {
 // --- Slot Logic ---
 const symbols = ['D', 'H', 'B', 'W', '♠'];
 const reelCount = 4;
-const stopDelay = [1200, 1600, 2000, 2600];
-const visible = 3;
+const stopDelay = [1200, 1600, 2000, 2600];     //Animationsdauern der Slot in ms
+const visible = 3;            //Anzahl sichtbare Symbole am Ende des Spins pro Spalte
 const symbolHeight = 64;
 const knobMin = 0;
-const knobMax = 90;
-const knobStart = knobMin;
-let balance = 1000;
-let currentBet = 10;
+const knobMax = 90;             //maximale Pixelbewegung des Knopfes des Hebels nach unten
+const knobStart = knobMin;      //Startposition des Knopfes des Hebels
+let balance = 1000;             //Startkapital
+let currentBet = 10;            //Mindesteinsatz
 let isSpinning = false;
-const headerBalanceAmount = document.getElementById('headerBalanceAmount');
-const betDisp = document.getElementById('coinsDisplay');
+const headerBalanceAmount = document.getElementById('headerBalanceAmount');         //Coinstand aus Header
+const betDisp = document.getElementById('coinsDisplay');                            //Feld des momentanen Einsatz
 const mascotImage = document.getElementById('mascotImage');
-const fadeDuration = 100;
+const fadeDuration = 100;            //Millisekunden an Animationsübergang
 
 function updateBalance() {
     headerBalanceAmount.textContent = balance;
@@ -69,6 +73,8 @@ function updateBalance() {
 function updateBet() {
     betDisp.textContent = `Einsatz: ${currentBet}`;
 }
+
+//Funktion sorgt dafür, dass man nicht mehr setzen kann als man hat
 document.querySelectorAll('.coin-btn').forEach((btn) => {
     btn.addEventListener('click', function () {
         let change = parseInt(btn.getAttribute('data-change'), 10);
@@ -78,16 +84,18 @@ document.querySelectorAll('.coin-btn').forEach((btn) => {
 });
 updateBalance();
 updateBet();
+
+//erstellt slot spalte und dessen Inhalt
 function createReel(reelElem, symbol, resultSet) {
     const strip = document.createElement('div');
     strip.className = 'reel-strip';
     const limitedSymbols = ['D', 'D', 'D', 'H', 'H', 'H', 'B', 'B', 'B', 'W', 'W', 'W', '♠',];
     for (let i = limitedSymbols.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [limitedSymbols[i], limitedSymbols[j]] = [limitedSymbols[j], limitedSymbols[i]];
+        const j = Math.floor(Math.random() * (i + 1));                          //Randomisierer
+        [limitedSymbols[i], limitedSymbols[j]] = [limitedSymbols[j], limitedSymbols[i]];   //Swap Elemente damit zuffälig
     }
     limitedSymbols.forEach((sym) => {
-        const reelSymbol = document.createElement('div');
+        const reelSymbol = document.createElement('div');           //gibt allen Symbolen kontext
         reelSymbol.className = 'reel-symbol';
         reelSymbol.textContent = sym;
         strip.appendChild(reelSymbol);
@@ -96,7 +104,7 @@ function createReel(reelElem, symbol, resultSet) {
         for (let i = 0; i < visible; i++) {
             const reelSymbol = document.createElement('div');
             reelSymbol.className = 'reel-symbol';
-            reelSymbol.textContent = resultSet[i];
+            reelSymbol.textContent = resultSet[i];                                      //speichert sichtbare Ergebnisse, damit sie ausgwertet werden können
             strip.appendChild(reelSymbol);
         }
     }
@@ -107,9 +115,7 @@ function createReel(reelElem, symbol, resultSet) {
     const offset = startIndex * symbolHeight;
     strip.style.top = `-${offset}px`;
 }
-function easeOutCubic(x) {
-    return 1 - Math.pow(1 - x, 3);
-}
+
 function evaluateWin(resultMatrix) {
     const visible = 3;
     function symbolsMatch(a, b) {
